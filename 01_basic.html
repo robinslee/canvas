@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Basic Gaming</title>
+    </head>
+    <body>
+        <canvas id="canvas" width="500" height="500">
+            Your browser does not support HTML5 canvas
+        </canvas>
+
+        <script>
+        window.addEventListener('load', canvasApp);
+
+        function canvasApp() {
+            if (!supportCanvas()) {
+                return;
+            }
+        }
+
+        function supportCanvas() {
+            return !!document.createElement('canvas').getContext;
+        }
+        </script>
+    </body>
+</html>
